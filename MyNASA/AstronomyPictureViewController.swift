@@ -9,6 +9,7 @@ import UIKit
 
 class AstronomyPictureViewController: UIViewController {
 
+    
     @IBOutlet weak var astronomyImageView: UIImageView!
     var selectedDate: Date?
 

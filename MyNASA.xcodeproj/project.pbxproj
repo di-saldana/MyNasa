@@ -16,6 +16,7 @@
 		EFC611732B0C255000A73E7A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611722B0C255000A73E7A /* CalendarViewController.swift */; };
 		EFC611752B0C257900A73E7A /* AstronomyPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611742B0C257900A73E7A /* AstronomyPictureViewController.swift */; };
 		EFC611772B0C259500A73E7A /* AstronomyPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611762B0C259500A73E7A /* AstronomyPicture.swift */; };
+		EFC611792B0CD88400A73E7A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611782B0CD88400A73E7A /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EFC611722B0C255000A73E7A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		EFC611742B0C257900A73E7A /* AstronomyPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureViewController.swift; sourceTree = "<group>"; };
 		EFC611762B0C259500A73E7A /* AstronomyPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicture.swift; sourceTree = "<group>"; };
+		EFC611782B0CD88400A73E7A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				EFC611722B0C255000A73E7A /* CalendarViewController.swift */,
 				EFC611742B0C257900A73E7A /* AstronomyPictureViewController.swift */,
 				EFC611762B0C259500A73E7A /* AstronomyPicture.swift */,
+				EFC611782B0CD88400A73E7A /* InfoViewController.swift */,
 			);
 			path = MyNASA;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				EFC611732B0C255000A73E7A /* CalendarViewController.swift in Sources */,
 				EFC611772B0C259500A73E7A /* AstronomyPicture.swift in Sources */,
 				EFC611752B0C257900A73E7A /* AstronomyPictureViewController.swift in Sources */,
+				EFC611792B0CD88400A73E7A /* InfoViewController.swift in Sources */,
 				EFC611632B0C227F00A73E7A /* ViewController.swift in Sources */,
 				EFC6115F2B0C227F00A73E7A /* AppDelegate.swift in Sources */,
 				EFC611612B0C227F00A73E7A /* SceneDelegate.swift in Sources */,

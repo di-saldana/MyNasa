@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="tlg-3M-BGU">
-                                <rect key="frame" x="39" y="236" width="320" height="307"/>
+                                <rect key="frame" x="39" y="236.00000000000003" width="320" height="306.66666666666674"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-175010400">
                                     <!--1995-06-16 10:00:00 +0000-->
                                 </date>
@@ -26,15 +26,23 @@
                                 </date>
                                 <connections>
                                     <action selector="dateSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ze0-iv-r69"/>
-                                    <segue destination="LVb-rB-4av" kind="show" identifier="ShowAstronomyPicture" id="z78-rU-2ok"/>
+                                    <segue destination="VQH-Fu-ZqZ" kind="show" identifier="ShowTabBarController" id="2FI-z0-g9W"/>
                                 </connections>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brq-M7-xE6">
+                                <rect key="frame" x="39" y="119" width="167" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tlg-3M-BGU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177.00000000000003" id="3Jn-AZ-y2b"/>
-                            <constraint firstItem="tlg-3M-BGU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="3sn-eQ-Ws5"/>
+                            <constraint firstItem="brq-M7-xE6" firstAttribute="leading" secondItem="tlg-3M-BGU" secondAttribute="leading" id="36n-An-W3I"/>
+                            <constraint firstItem="tlg-3M-BGU" firstAttribute="top" secondItem="brq-M7-xE6" secondAttribute="bottom" constant="81.000000000000028" id="IVG-sW-Jcc"/>
+                            <constraint firstItem="brq-M7-xE6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="TCk-y5-vtY"/>
+                            <constraint firstItem="brq-M7-xE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="v0L-8b-Ypz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -43,35 +51,118 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="-138" y="-27"/>
         </scene>
-        <!--Astronomy Picture View Controller-->
-        <scene sceneID="CGu-Aq-bsm">
+        <!--Information-->
+        <scene sceneID="5w9-El-Dvx">
             <objects>
-                <viewController id="LVb-rB-4av" customClass="AstronomyPictureViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UU0-xF-TGI">
+                <viewController title="Information" id="nH5-l0-3Fg" customClass="InfoViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f8z-rA-HIR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T88-fe-RBE">
-                                <rect key="frame" x="61" y="194" width="270" height="465"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Titulo" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaH-ep-Hpj">
+                                <rect key="frame" x="27" y="91" width="340" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descripcion" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bRz-Yf-HZ4">
+                                <rect key="frame" x="27" y="175" width="334" height="576"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW7-hf-VUE">
+                                <rect key="frame" x="33" y="135" width="340" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="MLl-Tb-HnC"/>
+                        <viewLayoutGuide key="safeArea" id="WtO-Xz-CbJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="27" id="1B0-8d-xnU"/>
+                            <constraint firstItem="CW7-hf-VUE" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="33" id="6R2-IL-ipE"/>
+                            <constraint firstItem="CW7-hf-VUE" firstAttribute="top" secondItem="ZaH-ep-Hpj" secondAttribute="bottom" constant="8" id="8Zm-TS-BYF"/>
+                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="bottom" secondItem="bRz-Yf-HZ4" secondAttribute="bottom" constant="42" id="PPA-vG-ciy"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="top" secondItem="WtO-Xz-CbJ" secondAttribute="top" constant="91" id="RHg-Ta-Eqj"/>
+                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="trailing" secondItem="bRz-Yf-HZ4" secondAttribute="trailing" constant="32" id="Ttl-Vz-CKz"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="centerX" secondItem="f8z-rA-HIR" secondAttribute="centerX" id="YMx-Gn-BaO"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="bRz-Yf-HZ4" secondAttribute="leading" id="b2W-Ow-q43"/>
+                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="trailing" secondItem="CW7-hf-VUE" secondAttribute="trailing" constant="20" id="e4k-kt-lBk"/>
+                            <constraint firstItem="bRz-Yf-HZ4" firstAttribute="top" secondItem="CW7-hf-VUE" secondAttribute="bottom" constant="19" id="q4c-ev-ad4"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cTN-wE-lVH"/>
+                    <tabBarItem key="tabBarItem" title="Information" image="info.circle.fill" catalog="system" id="voX-LE-7V5"/>
                     <connections>
-                        <outlet property="astronomyImageView" destination="T88-fe-RBE" id="HHS-Fh-mO0"/>
+                        <outlet property="dateLabel" destination="CW7-hf-VUE" id="me4-D5-3gR"/>
+                        <outlet property="descriptionTextView" destination="bRz-Yf-HZ4" id="93C-oX-1Cj"/>
+                        <outlet property="titleLabel" destination="ZaH-ep-Hpj" id="dVb-ut-jC3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pbQ-5q-gJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arH-7Q-aqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945.80152671755718" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1090.8396946564885" y="1472.5352112676057"/>
+        </scene>
+        <!--Image of the day-->
+        <scene sceneID="qHJ-Kc-cdG">
+            <objects>
+                <viewController title="Image of the day" id="USR-Wr-Aqh" customClass="AstronomyPictureViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KJv-ay-aOY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T88-fe-RBE">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="777"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fm9-xB-FmD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fm9-xB-FmD" firstAttribute="bottom" secondItem="T88-fe-RBE" secondAttribute="bottom" constant="16" id="15Q-p7-Q0p"/>
+                            <constraint firstItem="T88-fe-RBE" firstAttribute="leading" secondItem="Fm9-xB-FmD" secondAttribute="leading" id="5Yx-yl-wPE"/>
+                            <constraint firstItem="T88-fe-RBE" firstAttribute="centerX" secondItem="KJv-ay-aOY" secondAttribute="centerX" id="ACQ-N4-Jcq"/>
+                            <constraint firstItem="T88-fe-RBE" firstAttribute="top" secondItem="Fm9-xB-FmD" secondAttribute="top" id="o7M-B3-n2J"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Image" image="photo.artframe" catalog="system" id="69N-DO-KME"/>
+                    <connections>
+                        <outlet property="astronomyImageView" destination="T88-fe-RBE" id="Qq9-zm-ifY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnP-uy-6Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090.8396946564885" y="713.38028169014092"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="c6K-4i-PP1">
+            <objects>
+                <tabBarController id="VQH-Fu-ZqZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6RV-RU-9Gl"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oA0-hf-NCR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="USR-Wr-Aqh" kind="relationship" relationship="viewControllers" id="BTC-DA-oND"/>
+                        <segue destination="nH5-l0-3Fg" kind="relationship" relationship="viewControllers" id="dZZ-e9-Zud"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRV-PG-een" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="1040"/>
         </scene>
     </scenes>
     <resources>
+        <image name="info.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
