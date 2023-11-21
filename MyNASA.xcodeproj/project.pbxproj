@@ -13,6 +13,9 @@
 		EFC611662B0C227F00A73E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC611642B0C227F00A73E7A /* Main.storyboard */; };
 		EFC611682B0C228200A73E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC611672B0C228200A73E7A /* Assets.xcassets */; };
 		EFC6116B2B0C228200A73E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC611692B0C228200A73E7A /* LaunchScreen.storyboard */; };
+		EFC611732B0C255000A73E7A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611722B0C255000A73E7A /* CalendarViewController.swift */; };
+		EFC611752B0C257900A73E7A /* AstronomyPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611742B0C257900A73E7A /* AstronomyPictureViewController.swift */; };
+		EFC611772B0C259500A73E7A /* AstronomyPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611762B0C259500A73E7A /* AstronomyPicture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		EFC611672B0C228200A73E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFC6116A2B0C228200A73E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFC6116C2B0C228200A73E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC611722B0C255000A73E7A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		EFC611742B0C257900A73E7A /* AstronomyPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureViewController.swift; sourceTree = "<group>"; };
+		EFC611762B0C259500A73E7A /* AstronomyPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				EFC611672B0C228200A73E7A /* Assets.xcassets */,
 				EFC611692B0C228200A73E7A /* LaunchScreen.storyboard */,
 				EFC6116C2B0C228200A73E7A /* Info.plist */,
+				EFC611722B0C255000A73E7A /* CalendarViewController.swift */,
+				EFC611742B0C257900A73E7A /* AstronomyPictureViewController.swift */,
+				EFC611762B0C259500A73E7A /* AstronomyPicture.swift */,
 			);
 			path = MyNASA;
 			sourceTree = "<group>";
@@ -138,6 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC611732B0C255000A73E7A /* CalendarViewController.swift in Sources */,
+				EFC611772B0C259500A73E7A /* AstronomyPicture.swift in Sources */,
+				EFC611752B0C257900A73E7A /* AstronomyPictureViewController.swift in Sources */,
 				EFC611632B0C227F00A73E7A /* ViewController.swift in Sources */,
 				EFC6115F2B0C227F00A73E7A /* AppDelegate.swift in Sources */,
 				EFC611612B0C227F00A73E7A /* SceneDelegate.swift in Sources */,
