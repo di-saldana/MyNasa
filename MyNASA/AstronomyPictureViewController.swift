@@ -9,17 +9,20 @@ import UIKit
 
 class AstronomyPictureViewController: UIViewController {
 
-    
     @IBOutlet weak var astronomyImageView: UIImageView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     var selectedDate: Date?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         fetchAstronomyPicture()
     }
 
     func fetchAstronomyPicture() {
+        loadingIndicator.startAnimating()
+
         let apiKey = "JCcUwEhU7IpzmZ1kIN3rHHtO9rNLZQ0maCPIgvhV"
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -29,6 +32,13 @@ class AstronomyPictureViewController: UIViewController {
 
         if let url = URL(string: apiUrl) {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
+                defer {
+                    DispatchQueue.main.async {
+                        self.loadingIndicator.stopAnimating()
+                        self.loadingIndicator.isHidden = true
+                    }
+                }
+                
                 if let data = data {
                     do {
                         let decoder = JSONDecoder()

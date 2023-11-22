@@ -12,18 +12,27 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     var selectedDate: Date?
     var astronomyPicture: AstronomyPicture?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Set initial UI state
+        titleLabel.text = ""
+        dateLabel.text = ""
+        descriptionTextView.text = ""
+        loadingIndicator.startAnimating()
         
         // Fetch information based on the selected date
         fetchAstronomyPictureInfo()
     }
 
     func fetchAstronomyPictureInfo() {
+//        loadingIndicator.startAnimating()
+
         guard let selectedDate = selectedDate else {
             // Handle the case where selectedDate is nil
             return
@@ -39,6 +48,13 @@ class InfoViewController: UIViewController {
 
         if let url = URL(string: apiUrl) {
             URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+                defer {
+                    DispatchQueue.main.async {
+                        self?.loadingIndicator.stopAnimating()
+                        self?.loadingIndicator.isHidden = true
+                    }
+                }
+                
                 guard let data = data, error == nil else {
                     // Handle the error, e.g., show an alert
                     print("Error fetching data: \(error?.localizedDescription ?? "Unknown error")")

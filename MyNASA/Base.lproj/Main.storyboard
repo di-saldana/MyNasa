@@ -16,34 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyw-31-MFS">
-                                <rect key="frame" x="25" y="783" width="109" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start Again"/>
-                                <connections>
-                                    <action selector="restart:" destination="eXC-OR-l7f" eventType="touchUpInside" id="BPE-IN-U7f"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoy-Qf-TYV">
-                                <rect key="frame" x="304" y="783" width="57" height="35"/>
+                                <rect key="frame" x="299" y="783" width="62" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="A8q-jM-7b4"/>
+                                    <action selector="skip:" destination="eXC-OR-l7f" eventType="touchUpInside" id="Eqa-uS-BlC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M5U-pW-3vc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jyw-31-MFS" firstAttribute="bottom" secondItem="M5U-pW-3vc" secondAttribute="bottom" id="BEO-DT-hXx"/>
-                            <constraint firstItem="Jyw-31-MFS" firstAttribute="leading" secondItem="M5U-pW-3vc" secondAttribute="leading" constant="25" id="JIo-mL-62K"/>
-                            <constraint firstItem="M5U-pW-3vc" firstAttribute="trailing" secondItem="Uoy-Qf-TYV" secondAttribute="trailing" constant="32" id="s05-ve-JH3"/>
-                            <constraint firstItem="Jyw-31-MFS" firstAttribute="baseline" secondItem="Uoy-Qf-TYV" secondAttribute="baseline" id="vQt-CV-Iqc"/>
+                            <constraint firstItem="Uoy-Qf-TYV" firstAttribute="bottom" secondItem="M5U-pW-3vc" secondAttribute="bottom" id="PU4-7e-y8h"/>
+                            <constraint firstItem="Uoy-Qf-TYV" firstAttribute="leading" secondItem="M5U-pW-3vc" secondAttribute="leading" constant="299" id="wg1-Y5-oYn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="restartButton" destination="Jyw-31-MFS" id="yca-Up-taN"/>
                         <outlet property="skipButton" destination="Uoy-Qf-TYV" id="gQA-TZ-eZw"/>
                     </connections>
                 </viewController>
@@ -84,7 +73,7 @@
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -106,18 +95,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAu-E2-Obs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="-299"/>
+            <point key="canvasLocation" x="1090.8396946564885" y="-299.29577464788736"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="CalendarViewController" id="BYZ-38-t0r" customClass="CalendarViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="tlg-3M-BGU">
-                                <rect key="frame" x="39" y="177.00000000000003" width="320" height="306.66666666666674"/>
+                                <rect key="frame" x="39" y="236.00000000000003" width="320" height="306.66666666666674"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-175010400">
                                     <!--1995-06-16 10:00:00 +0000-->
                                 </date>
@@ -130,7 +119,7 @@
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brq-M7-xE6">
-                                <rect key="frame" x="39" y="60" width="167" height="36"/>
+                                <rect key="frame" x="39" y="119" width="167" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -181,26 +170,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Pke-z7-Fjh">
+                                <rect key="frame" x="193" y="411" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WtO-Xz-CbJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="27" id="1B0-8d-xnU"/>
-                            <constraint firstItem="CW7-hf-VUE" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="33" id="6R2-IL-ipE"/>
-                            <constraint firstItem="CW7-hf-VUE" firstAttribute="top" secondItem="ZaH-ep-Hpj" secondAttribute="bottom" constant="8" id="8Zm-TS-BYF"/>
-                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="bottom" secondItem="bRz-Yf-HZ4" secondAttribute="bottom" constant="42" id="PPA-vG-ciy"/>
-                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="top" secondItem="WtO-Xz-CbJ" secondAttribute="top" constant="91" id="RHg-Ta-Eqj"/>
-                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="trailing" secondItem="bRz-Yf-HZ4" secondAttribute="trailing" constant="32" id="Ttl-Vz-CKz"/>
-                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="centerX" secondItem="f8z-rA-HIR" secondAttribute="centerX" id="YMx-Gn-BaO"/>
-                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="bRz-Yf-HZ4" secondAttribute="leading" id="b2W-Ow-q43"/>
-                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="trailing" secondItem="CW7-hf-VUE" secondAttribute="trailing" constant="20" id="e4k-kt-lBk"/>
-                            <constraint firstItem="bRz-Yf-HZ4" firstAttribute="top" secondItem="CW7-hf-VUE" secondAttribute="bottom" constant="19" id="q4c-ev-ad4"/>
+                            <constraint firstItem="CW7-hf-VUE" firstAttribute="centerX" secondItem="Pke-z7-Fjh" secondAttribute="centerX" id="F9E-MF-J42"/>
+                            <constraint firstItem="CW7-hf-VUE" firstAttribute="top" secondItem="ZaH-ep-Hpj" secondAttribute="bottom" constant="8" id="Hf9-aT-xnG"/>
+                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="trailing" secondItem="bRz-Yf-HZ4" secondAttribute="trailing" constant="32" id="NKU-cY-Bs2"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="centerX" secondItem="f8z-rA-HIR" secondAttribute="centerX" id="YZh-sd-vqj"/>
+                            <constraint firstItem="CW7-hf-VUE" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="33" id="a3H-Dc-rZO"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="top" secondItem="WtO-Xz-CbJ" secondAttribute="top" constant="91" id="cAe-Zu-HrV"/>
+                            <constraint firstItem="bRz-Yf-HZ4" firstAttribute="top" secondItem="CW7-hf-VUE" secondAttribute="bottom" constant="19" id="ofT-sZ-1NK"/>
+                            <constraint firstItem="Pke-z7-Fjh" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="193" id="ovF-6d-pki"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="bRz-Yf-HZ4" secondAttribute="leading" id="ukP-P4-1CN"/>
+                            <constraint firstItem="Pke-z7-Fjh" firstAttribute="centerY" secondItem="f8z-rA-HIR" secondAttribute="centerY" id="xfZ-aj-FR2"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="27" id="zAg-Jf-xut"/>
+                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="bottom" secondItem="bRz-Yf-HZ4" secondAttribute="bottom" constant="42" id="zYg-PH-ysE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Information" image="info.circle.fill" catalog="system" id="voX-LE-7V5"/>
                     <connections>
                         <outlet property="dateLabel" destination="CW7-hf-VUE" id="me4-D5-3gR"/>
                         <outlet property="descriptionTextView" destination="bRz-Yf-HZ4" id="93C-oX-1Cj"/>
+                        <outlet property="loadingIndicator" destination="Pke-z7-Fjh" id="CPv-PV-O1y"/>
                         <outlet property="titleLabel" destination="ZaH-ep-Hpj" id="dVb-ut-jC3"/>
                     </connections>
                 </viewController>
@@ -219,19 +214,27 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T88-fe-RBE">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="777"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WzZ-5s-gsK">
+                                <rect key="frame" x="186" y="378" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fm9-xB-FmD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Fm9-xB-FmD" firstAttribute="bottom" secondItem="T88-fe-RBE" secondAttribute="bottom" constant="16" id="15Q-p7-Q0p"/>
-                            <constraint firstItem="T88-fe-RBE" firstAttribute="leading" secondItem="Fm9-xB-FmD" secondAttribute="leading" id="5Yx-yl-wPE"/>
-                            <constraint firstItem="T88-fe-RBE" firstAttribute="centerX" secondItem="KJv-ay-aOY" secondAttribute="centerX" id="ACQ-N4-Jcq"/>
-                            <constraint firstItem="T88-fe-RBE" firstAttribute="top" secondItem="Fm9-xB-FmD" secondAttribute="top" id="o7M-B3-n2J"/>
+                            <constraint firstItem="T88-fe-RBE" firstAttribute="centerX" secondItem="WzZ-5s-gsK" secondAttribute="centerX" id="E4p-Tx-3K6"/>
+                            <constraint firstItem="T88-fe-RBE" firstAttribute="leading" secondItem="Fm9-xB-FmD" secondAttribute="leading" id="MSs-vS-Tfg"/>
+                            <constraint firstItem="T88-fe-RBE" firstAttribute="centerY" secondItem="WzZ-5s-gsK" secondAttribute="centerY" id="Sb2-H6-Z8y"/>
+                            <constraint firstItem="Fm9-xB-FmD" firstAttribute="bottom" secondItem="T88-fe-RBE" secondAttribute="bottom" constant="16" id="XaG-eD-fcj"/>
+                            <constraint firstItem="T88-fe-RBE" firstAttribute="top" secondItem="Fm9-xB-FmD" secondAttribute="top" id="hh5-Gs-q0m"/>
+                            <constraint firstItem="WzZ-5s-gsK" firstAttribute="top" secondItem="Fm9-xB-FmD" secondAttribute="top" constant="378" id="kUs-mb-lAV"/>
+                            <constraint firstItem="WzZ-5s-gsK" firstAttribute="leading" secondItem="Fm9-xB-FmD" secondAttribute="leading" constant="186" id="qTx-v7-7mW"/>
+                            <constraint firstItem="WzZ-5s-gsK" firstAttribute="centerX" secondItem="KJv-ay-aOY" secondAttribute="centerX" id="xUo-ai-Uoe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Image" image="photo.artframe" catalog="system" id="69N-DO-KME"/>
                     <connections>
                         <outlet property="astronomyImageView" destination="T88-fe-RBE" id="Qq9-zm-ifY"/>
+                        <outlet property="loadingIndicator" destination="WzZ-5s-gsK" id="0ad-WR-E2E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnP-uy-6Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
