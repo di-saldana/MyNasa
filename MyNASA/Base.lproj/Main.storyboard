@@ -16,40 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLO-Pw-5su">
-                                <rect key="frame" x="35" y="774" width="109" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyw-31-MFS">
+                                <rect key="frame" x="25" y="783" width="109" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start Again"/>
                                 <connections>
-                                    <action selector="restart:" destination="eXC-OR-l7f" eventType="touchUpInside" id="r7n-yn-V5U"/>
+                                    <action selector="restart:" destination="eXC-OR-l7f" eventType="touchUpInside" id="BPE-IN-U7f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6V-iW-CHb">
-                                <rect key="frame" x="295" y="774" width="57" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoy-Qf-TYV">
+                                <rect key="frame" x="304" y="783" width="57" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Skip"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="" id="jWp-IP-tk2"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="A8q-jM-7b4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M5U-pW-3vc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="M5U-pW-3vc" firstAttribute="trailing" secondItem="C6V-iW-CHb" secondAttribute="trailing" constant="41" id="9cA-3R-X31"/>
-                            <constraint firstItem="vLO-Pw-5su" firstAttribute="leading" secondItem="M5U-pW-3vc" secondAttribute="leading" constant="35" id="cu2-6e-hVs"/>
-                            <constraint firstItem="vLO-Pw-5su" firstAttribute="top" secondItem="M5U-pW-3vc" secondAttribute="top" constant="715" id="o5Q-kv-bMw"/>
-                            <constraint firstItem="vLO-Pw-5su" firstAttribute="baseline" secondItem="C6V-iW-CHb" secondAttribute="baseline" id="pax-xH-gba"/>
+                            <constraint firstItem="Jyw-31-MFS" firstAttribute="bottom" secondItem="M5U-pW-3vc" secondAttribute="bottom" id="BEO-DT-hXx"/>
+                            <constraint firstItem="Jyw-31-MFS" firstAttribute="leading" secondItem="M5U-pW-3vc" secondAttribute="leading" constant="25" id="JIo-mL-62K"/>
+                            <constraint firstItem="M5U-pW-3vc" firstAttribute="trailing" secondItem="Uoy-Qf-TYV" secondAttribute="trailing" constant="32" id="s05-ve-JH3"/>
+                            <constraint firstItem="Jyw-31-MFS" firstAttribute="baseline" secondItem="Uoy-Qf-TYV" secondAttribute="baseline" id="vQt-CV-Iqc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="restartButton" destination="vLO-Pw-5su" id="5tI-BA-pBY"/>
-                        <outlet property="skipButton" destination="C6V-iW-CHb" id="U4k-gG-Ybl"/>
+                        <outlet property="restartButton" destination="Jyw-31-MFS" id="yca-Up-taN"/>
+                        <outlet property="skipButton" destination="Uoy-Qf-TYV" id="gQA-TZ-eZw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zt9-9d-5p5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1353" y="-299"/>
+            <point key="canvasLocation" x="-1353.4351145038167" y="-299.29577464788736"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="zZr-M9-TLW">

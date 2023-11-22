@@ -9,7 +9,7 @@ import UIKit
 
 class PageContentViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView! 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
     
     var pageIndex = 0
@@ -25,7 +25,7 @@ class PageContentViewController: UIViewController {
 
     }
     
-
+    
     /*
     // MARK: - Navigation
 

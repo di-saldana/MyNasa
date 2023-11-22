@@ -21,8 +21,6 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        skipButton.layer.zPosition = 3
-        restartButton.layer.zPosition = 4
         // Creamos el controlador paginado
         self.pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController?
         self.pageViewController?.dataSource = self
@@ -35,12 +33,21 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         self.pageViewController?.setViewControllers(viewControllers, direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
 
         // Cambiamos el tamaño para que quepa el botón de abajo
-        self.pageViewController?.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height-30)
+        self.pageViewController?.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30)
 
         // Añadimos el primer controlador de contenido
         self.addChild(self.pageViewController!)
         self.view.addSubview((self.pageViewController?.view)!)
         self.pageViewController?.didMove(toParent: self)
+        
+//        restartButton.center.y = self.view.frame.size.height - 25
+//        skipButton.center.y = self.view.frame.size.height - 25
+        
+        restartButton.layer.zPosition = 1
+        skipButton.layer.zPosition = 1
+        
+        view.bringSubviewToFront(restartButton)
+        view.bringSubviewToFront(skipButton)
     }
 
     
@@ -63,6 +70,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
 
           let pvc = viewController as! PageContentViewController
           var index = pvc.pageIndex
+          print("before")
 
           if index == 0 || index == Foundation.NSNotFound {
               return nil
@@ -96,10 +104,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         return 0
     }
 
+    
     @IBAction func restart(_ sender: UIButton) {
         let startingViewController = self.viewControllerAtIndex(index: 0)
         let viewControllers = [startingViewController!]
         self.pageViewController?.setViewControllers(viewControllers, direction: UIPageViewController.NavigationDirection.reverse, animated: false, completion: nil)
+        print("RESTART PRESSED")
     }
+    
 }
 
