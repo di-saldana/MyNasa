@@ -8,7 +8,7 @@
 import Foundation
 
 struct AstronomyPicture: Codable {
-    let date: String
+    let date: String?
     let explanation: String
     let hdurl: String
     let mediaType: String?
@@ -17,7 +17,7 @@ struct AstronomyPicture: Codable {
     let url: String
 
     enum CodingKeys: String, CodingKey {
-        case date, explanation, hdurl, mediaType, serviceVersion, title, url
+        case date, explanation, title, url, hdurl, mediaType, serviceVersion
     }
 }
 
