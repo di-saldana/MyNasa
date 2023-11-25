@@ -18,7 +18,7 @@ class EventViewController: UITableViewController, UISearchResultsUpdating {
         super.viewDidLoad()
 
         self.title = "EONET Events"
-        
+
         if let path = Bundle.main.path(forResource: "events", ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
             let eventsResponse = try? JSONDecoder().decode(EventsResponse.self, from: data) {
@@ -53,12 +53,10 @@ class EventViewController: UITableViewController, UISearchResultsUpdating {
 
         if tableView == src.tableView {
             return self.searchResults.count
-        }
-        else {
+        } else {
             return self.searchResults.count
         }
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "idCelda", for: indexPath)
@@ -85,7 +83,11 @@ class EventViewController: UITableViewController, UISearchResultsUpdating {
             let sc = self.searchController?.searchResultsController as! UITableViewController
             object = self.searchResults[(sc.tableView.indexPathForSelectedRow?.row)!]
         }
-        print(object.title)
+
+        // Open the source URL in the default web browser
+        if let url = URL(string: object.sources.first?.url ?? "") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 
     // Search update method...
@@ -105,6 +107,4 @@ class EventViewController: UITableViewController, UISearchResultsUpdating {
             searchResultsController.tableView.reloadData()
         }
     }
-
-
 }
