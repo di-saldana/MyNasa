@@ -5,13 +5,14 @@
 //  Created by Dianelys Saldaña on 11/23/23.
 //
 
+
 import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var foodImages = [String]()
+    var epicImages = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +21,13 @@ class CollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
         
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         // Do any additional setup after loading the view.
         
-        for i in 1..<9 {
-            let image = "\(i).jpg"
-            self.foodImages.append(image)
+        for i in 1..<25 {
+            let image = "epic-\(i).jpeg"
+            self.epicImages.append(image)
         }
         
     }
@@ -43,24 +44,32 @@ class CollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     
-    //    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-    //        // #warning Incomplete implementation, return the number of sections
-    //        return 0
-    //    }
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.foodImages.count
+        return self.epicImages.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "idCelda", for: indexPath) as! CollectionViewCell
         
-        // Configure the cell
-        if let image = UIImage(named:self.foodImages[indexPath.row]) {
+        if let image = UIImage(named:self.epicImages[indexPath.row]) {
             cell.imageView.image = image
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let spacing: CGFloat = 5
+        let numberOfColumns: CGFloat = 3
+        let screenWidth = UIScreen.main.bounds.width
+        let cellWidth = (screenWidth - (spacing * (numberOfColumns - 1))) / numberOfColumns
+        let cellHeight = cellWidth
+        
+        return CGSize(width: cellWidth, height: cellHeight)
     }
     
     
@@ -94,4 +103,5 @@ class CollectionViewController: UICollectionViewController {
      
      }
      */
+    
 }
