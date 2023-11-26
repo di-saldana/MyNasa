@@ -135,6 +135,7 @@
                     <navigationItem key="navigationItem" id="WIs-NR-ih4"/>
                     <connections>
                         <outlet property="datePicker" destination="tlg-3M-BGU" id="VUU-08-bXB"/>
+                        <outlet property="label" destination="brq-M7-xE6" id="bUe-MA-THc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -303,30 +304,31 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW7-hf-VUE">
-                                <rect key="frame" x="33" y="135" width="340" height="22"/>
+                                <rect key="frame" x="33" y="135" width="327" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Pke-z7-Fjh">
-                                <rect key="frame" x="193" y="411" width="20" height="20"/>
+                                <rect key="frame" x="193" y="411" width="7" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WtO-Xz-CbJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CW7-hf-VUE" firstAttribute="centerX" secondItem="Pke-z7-Fjh" secondAttribute="centerX" id="F9E-MF-J42"/>
-                            <constraint firstItem="CW7-hf-VUE" firstAttribute="top" secondItem="ZaH-ep-Hpj" secondAttribute="bottom" constant="8" id="Hf9-aT-xnG"/>
-                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="trailing" secondItem="bRz-Yf-HZ4" secondAttribute="trailing" constant="32" id="NKU-cY-Bs2"/>
-                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="centerX" secondItem="f8z-rA-HIR" secondAttribute="centerX" id="YZh-sd-vqj"/>
-                            <constraint firstItem="CW7-hf-VUE" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="33" id="a3H-Dc-rZO"/>
-                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="top" secondItem="WtO-Xz-CbJ" secondAttribute="top" constant="91" id="cAe-Zu-HrV"/>
-                            <constraint firstItem="bRz-Yf-HZ4" firstAttribute="top" secondItem="CW7-hf-VUE" secondAttribute="bottom" constant="19" id="ofT-sZ-1NK"/>
-                            <constraint firstItem="Pke-z7-Fjh" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="193" id="ovF-6d-pki"/>
-                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="bRz-Yf-HZ4" secondAttribute="leading" id="ukP-P4-1CN"/>
-                            <constraint firstItem="Pke-z7-Fjh" firstAttribute="centerY" secondItem="f8z-rA-HIR" secondAttribute="centerY" id="xfZ-aj-FR2"/>
-                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="27" id="zAg-Jf-xut"/>
-                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="bottom" secondItem="bRz-Yf-HZ4" secondAttribute="bottom" constant="42" id="zYg-PH-ysE"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="centerX" secondItem="f8z-rA-HIR" secondAttribute="centerX" id="74W-29-g5X"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="27" id="ELc-zB-5JJ"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="top" secondItem="WtO-Xz-CbJ" secondAttribute="top" constant="91" id="FJf-l1-7T2"/>
+                            <constraint firstItem="CW7-hf-VUE" firstAttribute="centerX" secondItem="Pke-z7-Fjh" secondAttribute="centerX" id="GdR-pr-KJp"/>
+                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="trailing" secondItem="bRz-Yf-HZ4" secondAttribute="trailing" constant="32" id="IjR-VL-cEy"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="leading" secondItem="bRz-Yf-HZ4" secondAttribute="leading" id="Tib-y8-of2"/>
+                            <constraint firstItem="CW7-hf-VUE" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="33" id="VrD-HC-TfD"/>
+                            <constraint firstItem="bRz-Yf-HZ4" firstAttribute="top" secondItem="CW7-hf-VUE" secondAttribute="bottom" constant="19" id="XZ8-fM-PY4"/>
+                            <constraint firstItem="Pke-z7-Fjh" firstAttribute="centerY" secondItem="f8z-rA-HIR" secondAttribute="centerY" id="h5n-Tz-DSG"/>
+                            <constraint firstItem="Pke-z7-Fjh" firstAttribute="leading" secondItem="WtO-Xz-CbJ" secondAttribute="leading" constant="193" id="jgT-kX-S0t"/>
+                            <constraint firstItem="WtO-Xz-CbJ" firstAttribute="bottom" secondItem="bRz-Yf-HZ4" secondAttribute="bottom" constant="42" id="utk-rx-Ebc"/>
+                            <constraint firstItem="CW7-hf-VUE" firstAttribute="top" secondItem="ZaH-ep-Hpj" secondAttribute="bottom" constant="8" symbolic="YES" id="vDs-ev-OCd"/>
+                            <constraint firstItem="ZaH-ep-Hpj" firstAttribute="centerX" secondItem="CW7-hf-VUE" secondAttribute="centerX" id="w97-PN-Iwh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Information" image="info.circle.fill" catalog="system" id="voX-LE-7V5"/>
@@ -352,21 +354,19 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T88-fe-RBE">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="777"/>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WzZ-5s-gsK">
-                                <rect key="frame" x="186" y="378" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WzZ-5s-gsK">
+                                <rect key="frame" x="186.66666666666666" y="411" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fm9-xB-FmD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="T88-fe-RBE" firstAttribute="centerX" secondItem="WzZ-5s-gsK" secondAttribute="centerX" id="E4p-Tx-3K6"/>
+                            <constraint firstItem="WzZ-5s-gsK" firstAttribute="centerY" secondItem="KJv-ay-aOY" secondAttribute="centerY" id="3NU-sI-8zz"/>
+                            <constraint firstItem="T88-fe-RBE" firstAttribute="centerX" secondItem="WzZ-5s-gsK" secondAttribute="centerX" id="HzT-lv-kMp"/>
                             <constraint firstItem="T88-fe-RBE" firstAttribute="leading" secondItem="Fm9-xB-FmD" secondAttribute="leading" id="MSs-vS-Tfg"/>
-                            <constraint firstItem="T88-fe-RBE" firstAttribute="centerY" secondItem="WzZ-5s-gsK" secondAttribute="centerY" id="Sb2-H6-Z8y"/>
                             <constraint firstItem="Fm9-xB-FmD" firstAttribute="bottom" secondItem="T88-fe-RBE" secondAttribute="bottom" constant="16" id="XaG-eD-fcj"/>
+                            <constraint firstItem="WzZ-5s-gsK" firstAttribute="centerX" secondItem="KJv-ay-aOY" secondAttribute="centerX" id="abh-0g-57t"/>
                             <constraint firstItem="T88-fe-RBE" firstAttribute="top" secondItem="Fm9-xB-FmD" secondAttribute="top" id="hh5-Gs-q0m"/>
-                            <constraint firstItem="WzZ-5s-gsK" firstAttribute="top" secondItem="Fm9-xB-FmD" secondAttribute="top" constant="378" id="kUs-mb-lAV"/>
-                            <constraint firstItem="WzZ-5s-gsK" firstAttribute="leading" secondItem="Fm9-xB-FmD" secondAttribute="leading" constant="186" id="qTx-v7-7mW"/>
-                            <constraint firstItem="WzZ-5s-gsK" firstAttribute="centerX" secondItem="KJv-ay-aOY" secondAttribute="centerX" id="xUo-ai-Uoe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Image" image="photo.artframe" catalog="system" id="69N-DO-KME"/>

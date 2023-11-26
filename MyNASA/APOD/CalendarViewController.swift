@@ -10,10 +10,25 @@ import UIKit
 class CalendarViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var label: UILabel!
+    
     var selectedDate: Date?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Condtraints para iPad
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            label.isHidden = true
+            
+            datePicker.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                datePicker.topAnchor.constraint(equalTo: view.topAnchor),
+                datePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                datePicker.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                datePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            ])
+        }
     }
     
     // Esta función se ejecuta cuando se selecciona una fecha en el datePicker
