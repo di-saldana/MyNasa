@@ -59,6 +59,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF0C8FCC2B13C1C300E6FD92 /* APOD */ = {
+			isa = PBXGroup;
+			children = (
+				EFC611742B0C257900A73E7A /* AstronomyPictureViewController.swift */,
+				EFC611762B0C259500A73E7A /* AstronomyPicture.swift */,
+				EFC611782B0CD88400A73E7A /* InfoViewController.swift */,
+				EFC611722B0C255000A73E7A /* CalendarViewController.swift */,
+			);
+			path = APOD;
+			sourceTree = "<group>";
+		};
+		EF0C8FCD2B13C20300E6FD92 /* EPIC */ = {
+			isa = PBXGroup;
+			children = (
+				EFE29CFF2B0F7ACD004821A8 /* CollectionViewController.swift */,
+				EFE29D012B0F7AF3004821A8 /* CollectionViewCell.swift */,
+				EF0C8FC92B13A9AE00E6FD92 /* DetailViewController.swift */,
+			);
+			path = EPIC;
+			sourceTree = "<group>";
+		};
+		EF0C8FCE2B13C22A00E6FD92 /* EONET */ = {
+			isa = PBXGroup;
+			children = (
+				EF0C8FC12B12289700E6FD92 /* Event.swift */,
+				EF0C8FC32B1228B600E6FD92 /* EventViewController.swift */,
+				EF0C8FC52B12290300E6FD92 /* events.json */,
+			);
+			path = EONET;
+			sourceTree = "<group>";
+		};
+		EF0C8FCF2B13C25F00E6FD92 /* PageContent */ = {
+			isa = PBXGroup;
+			children = (
+				EFC611622B0C227F00A73E7A /* ViewController.swift */,
+				EFC6117A2B0CEA9100A73E7A /* PageContentViewController.swift */,
+			);
+			path = PageContent;
+			sourceTree = "<group>";
+		};
 		EFC611522B0C227F00A73E7A = {
 			isa = PBXGroup;
 			children = (
@@ -78,24 +118,16 @@
 		EFC6115D2B0C227F00A73E7A /* MyNASA */ = {
 			isa = PBXGroup;
 			children = (
+				EF0C8FCF2B13C25F00E6FD92 /* PageContent */,
+				EF0C8FCE2B13C22A00E6FD92 /* EONET */,
+				EF0C8FCD2B13C20300E6FD92 /* EPIC */,
+				EF0C8FCC2B13C1C300E6FD92 /* APOD */,
 				EFC6115E2B0C227F00A73E7A /* AppDelegate.swift */,
 				EFC611602B0C227F00A73E7A /* SceneDelegate.swift */,
-				EFC611622B0C227F00A73E7A /* ViewController.swift */,
 				EFC611642B0C227F00A73E7A /* Main.storyboard */,
 				EFC611672B0C228200A73E7A /* Assets.xcassets */,
 				EFC611692B0C228200A73E7A /* LaunchScreen.storyboard */,
 				EFC6116C2B0C228200A73E7A /* Info.plist */,
-				EFC611722B0C255000A73E7A /* CalendarViewController.swift */,
-				EFC611742B0C257900A73E7A /* AstronomyPictureViewController.swift */,
-				EFC611762B0C259500A73E7A /* AstronomyPicture.swift */,
-				EFC611782B0CD88400A73E7A /* InfoViewController.swift */,
-				EFC6117A2B0CEA9100A73E7A /* PageContentViewController.swift */,
-				EFE29CFF2B0F7ACD004821A8 /* CollectionViewController.swift */,
-				EFE29D012B0F7AF3004821A8 /* CollectionViewCell.swift */,
-				EF0C8FC12B12289700E6FD92 /* Event.swift */,
-				EF0C8FC32B1228B600E6FD92 /* EventViewController.swift */,
-				EF0C8FC52B12290300E6FD92 /* events.json */,
-				EF0C8FC92B13A9AE00E6FD92 /* DetailViewController.swift */,
 			);
 			path = MyNASA;
 			sourceTree = "<group>";

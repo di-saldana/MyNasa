@@ -11,8 +11,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     
     @IBOutlet weak var skipButton: UIButton!
     
-    let pageDescriptions = ["Experience a captivating glimpse into the cosmos by viewing the Astronomy Picture of the Day!", "Discover EPIC Images of Earth!", "Learn more about the history around natural events all around the world!"]
-    let pageImages = ["Rover.png", "Planet-1.png", "Star2.png"]
+    let pageDescriptions = ["Explore some of the most interesting capabilities NASA's API has to offer!", "Experience a captivating glimpse into the cosmos by viewing the Astronomy Picture of the Day!", "Discover EPIC Images of Earth!", "Learn more about the history around natural events all around the world!"]
+    let pageImages = ["Saly-1.png", "Rover.png", "Planet-1.png", "Star2.png"]
 
     var pageViewController : UIPageViewController?
 

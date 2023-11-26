@@ -23,10 +23,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cPs-fo-67H" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="LK4-TE-bsN"/>
-                            <constraint firstItem="cPs-fo-67H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="WOA-DH-Xiq"/>
-                            <constraint firstItem="cPs-fo-67H" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="X8I-Tc-8hP"/>
-                            <constraint firstItem="cPs-fo-67H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="l7b-Ix-DEl"/>
+                            <constraint firstItem="cPs-fo-67H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="Czd-Lu-o7X"/>
+                            <constraint firstItem="cPs-fo-67H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="303" id="PKU-IM-wys"/>
+                            <constraint firstItem="cPs-fo-67H" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Rb3-Ev-xvC"/>
+                            <constraint firstItem="cPs-fo-67H" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="pzG-79-aFx"/>
                         </constraints>
                     </view>
                 </viewController>
