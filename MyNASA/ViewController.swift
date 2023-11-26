@@ -98,9 +98,9 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     }
     
     @IBAction func skip(_ sender: UIButton) {
-        let calendarViewController = storyboard?.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
-        calendarViewController.modalPresentationStyle = .fullScreen
-        self.present(calendarViewController, animated: true, completion: nil)
+        let mainTabBarViewController = storyboard?.instantiateViewController(withIdentifier: "mainTabBar") as! UITabBarController
+        mainTabBarViewController.modalPresentationStyle = .fullScreen
+        self.present(mainTabBarViewController, animated: true, completion: nil)
     }
     
 }

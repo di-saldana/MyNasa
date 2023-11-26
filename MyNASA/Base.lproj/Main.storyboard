@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hQs-Fh-Dae">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eXC-OR-l7f">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--PageView-->
         <scene sceneID="hpk-lL-hhG">
             <objects>
-                <viewController id="eXC-OR-l7f" customClass="ViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eXC-OR-l7f" userLabel="PageView" customClass="ViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sb2-Cg-qsy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1090.8396946564885" y="-299.29577464788736"/>
         </scene>
-        <!--Calendar View Controller-->
+        <!--Calendar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CalendarViewController" id="BYZ-38-t0r" customClass="CalendarViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" id="BYZ-38-t0r" userLabel="Calendar" customClass="CalendarViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,24 +125,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o94-wv-2MZ">
-                                <rect key="frame" x="26" y="703" width="101" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Collection"/>
-                                <connections>
-                                    <segue destination="hQs-Fh-Dae" kind="show" id="eEL-0I-a9F"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGM-gO-LKI">
-                                <rect key="frame" x="149" y="703" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Events"/>
-                                <connections>
-                                    <segue destination="hu6-87-Ng9" kind="show" id="Ztm-7U-3Me"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -153,6 +135,7 @@
                             <constraint firstItem="brq-M7-xE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="v0L-8b-Ypz"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="APOD" image="calendar" catalog="system" id="0fL-CQ-niw"/>
                     <navigationItem key="navigationItem" id="WIs-NR-ih4"/>
                     <connections>
                         <outlet property="datePicker" destination="tlg-3M-BGU" id="VUU-08-bXB"/>
@@ -160,14 +143,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1353.4351145038167" y="1038.7323943661972"/>
+            <point key="canvasLocation" x="-426.71755725190837" y="1038.7323943661972"/>
         </scene>
-        <!--EPIC November 2023 Images-->
+        <!--MainTabBar-->
+        <scene sceneID="rct-kj-QgV">
+            <objects>
+                <tabBarController storyboardIdentifier="mainTabBar" id="7px-Hc-Dik" userLabel="MainTabBar" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Zji-sd-qiE"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6bQ-ul-uLP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="96n-q6-Wpo"/>
+                        <segue destination="hQs-Fh-Dae" kind="relationship" relationship="viewControllers" id="0SN-aq-BoJ"/>
+                        <segue destination="hu6-87-Ng9" kind="relationship" relationship="viewControllers" id="2VL-a4-aN4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zuH-A2-cfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2492" y="1473"/>
+        </scene>
+        <!--EPIC-->
         <scene sceneID="Ptj-CG-9aR">
             <objects>
-                <collectionViewController title="EPIC November 2023 Images" interactionActivityTrackingBaseName="EPIC November 2023 Images" id="hQs-Fh-Dae" userLabel="EPIC November 2023 Images" customClass="CollectionViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="EPIC November 2023 Images" interactionActivityTrackingBaseName="EPIC November 2023 Images" id="hQs-Fh-Dae" userLabel="EPIC" customClass="CollectionViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" id="LZG-wx-jZo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="s1h-Vv-mkj">
@@ -200,18 +203,19 @@
                             <outlet property="delegate" destination="hQs-Fh-Dae" id="Z7p-Oy-Ldc"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="EPIC" image="globe.europe.africa.fill" catalog="system" id="GbY-Ut-CS2"/>
                     <navigationItem key="navigationItem" id="OxX-OM-Ez3"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GfG-4n-ixl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2732" y="2292"/>
+            <point key="canvasLocation" x="-428" y="2218"/>
         </scene>
-        <!--Event View Controller-->
+        <!--EONET-->
         <scene sceneID="QyF-a1-nCJ">
             <objects>
-                <tableViewController id="Dkp-mA-aoH" customClass="EventViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Dkp-mA-aoH" userLabel="EONET" customClass="EventViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FFl-vK-x6g">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -233,7 +237,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2d-y1-LwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="3294"/>
+            <point key="canvasLocation" x="789" y="3294"/>
         </scene>
         <!--Information-->
         <scene sceneID="5w9-El-Dvx">
@@ -293,12 +297,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arH-7Q-aqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090.8396946564885" y="1472.5352112676057"/>
+            <point key="canvasLocation" x="2017.5572519083969" y="1472.5352112676057"/>
         </scene>
-        <!--Image of the day-->
+        <!--APOD-->
         <scene sceneID="qHJ-Kc-cdG">
             <objects>
-                <viewController title="Image of the day" id="USR-Wr-Aqh" customClass="AstronomyPictureViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Image of the day" id="USR-Wr-Aqh" userLabel="APOD" customClass="AstronomyPictureViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KJv-ay-aOY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnP-uy-6Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090.8396946564885" y="713.38028169014092"/>
+            <point key="canvasLocation" x="2017.5572519083969" y="713.38028169014092"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="c6K-4i-PP1">
@@ -350,16 +354,17 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRV-PG-een" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="1040"/>
+            <point key="canvasLocation" x="788.54961832061065" y="1039.4366197183099"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--EONET-->
         <scene sceneID="JwB-Ia-7T7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hu6-87-Ng9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="EONET" image="doc.text.magnifyingglass" catalog="system" id="FW1-hf-yZ4"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="d8l-G8-n8S"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bOW-YG-BLu">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -369,10 +374,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wod-3A-qjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1353" y="3294"/>
+            <point key="canvasLocation" x="-428" y="3294"/>
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="doc.text.magnifyingglass" catalog="system" width="110" height="128"/>
+        <image name="globe.europe.africa.fill" catalog="system" width="128" height="123"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
