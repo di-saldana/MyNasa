@@ -30,6 +30,18 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             self.epicImages.append(image)
         }
         
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            let layout = UICollectionViewFlowLayout()
+            layout.minimumInteritemSpacing = 4
+            layout.minimumLineSpacing = 2
+            layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            
+            let itemWidth = (UIScreen.main.bounds.width - layout.sectionInset.left - layout.sectionInset.right - layout.minimumInteritemSpacing * 2) / 3 // Adjust the division based on the number of items per row
+            let itemHeight = itemWidth
+            
+            let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        }
+        
     }
     
     /*

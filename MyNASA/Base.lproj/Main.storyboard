@@ -98,7 +98,7 @@
         <!--Calendar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CalendarViewController" id="BYZ-38-t0r" userLabel="Calendar" customClass="CalendarViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" title="APOD" id="BYZ-38-t0r" userLabel="Calendar" customClass="CalendarViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,6 +188,11 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="Ere-nm-Lbk"/>
+                                        </mask>
+                                    </variation>
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="imageView" destination="Ere-nm-Lbk" id="zUj-yg-Qys"/>
@@ -399,7 +404,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hu6-87-Ng9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="EONET" image="doc.text.magnifyingglass" catalog="system" id="FW1-hf-yZ4"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="d8l-G8-n8S"/>
+                    <navigationItem key="navigationItem" title="EONET" id="d8l-G8-n8S"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bOW-YG-BLu">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
