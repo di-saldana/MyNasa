@@ -17,7 +17,7 @@ class EventViewController: UITableViewController, UISearchResultsUpdating {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "EONET Events"
+        self.title = "EONET"
 
         if let path = Bundle.main.path(forResource: "events", ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path)),

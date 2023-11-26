@@ -42,6 +42,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
 
         skipButton.layer.zPosition = 1
         view.bringSubviewToFront(skipButton)
+        skipButton.translatesAutoresizingMaskIntoConstraints = false
+
+        // Add constraints to keep the button in the bottom right corner
+        NSLayoutConstraint.activate([
+            skipButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            skipButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
+        ])
     }
 
     
@@ -96,6 +103,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
     }
+    
     
     @IBAction func skip(_ sender: UIButton) {
         let mainTabBarViewController = storyboard?.instantiateViewController(withIdentifier: "mainTabBar") as! UITabBarController

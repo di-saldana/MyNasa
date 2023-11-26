@@ -13,28 +13,25 @@
         <scene sceneID="hpk-lL-hhG">
             <objects>
                 <viewController id="eXC-OR-l7f" userLabel="PageView" customClass="ViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Sb2-Cg-qsy">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sb2-Cg-qsy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoy-Qf-TYV">
-                                <rect key="frame" x="299" y="783" width="62" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCI-hn-1j1">
+                                <rect key="frame" x="309" y="783" width="62" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start"/>
                                 <connections>
-                                    <action selector="skip:" destination="eXC-OR-l7f" eventType="touchUpInside" id="Eqa-uS-BlC"/>
+                                    <action selector="skip:" destination="eXC-OR-l7f" eventType="touchUpInside" id="12a-8v-mym"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M5U-pW-3vc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Uoy-Qf-TYV" firstAttribute="bottom" secondItem="M5U-pW-3vc" secondAttribute="bottom" id="PU4-7e-y8h"/>
-                            <constraint firstItem="Uoy-Qf-TYV" firstAttribute="leading" secondItem="M5U-pW-3vc" secondAttribute="leading" constant="299" id="wg1-Y5-oYn"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="skipButton" destination="Uoy-Qf-TYV" id="gQA-TZ-eZw"/>
+                        <outlet property="skipButton" destination="tCI-hn-1j1" id="NcZ-cK-2LD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zt9-9d-5p5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -70,7 +67,7 @@
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="177" id="Lfd-nR-vUa"/>
+                                            <constraint firstAttribute="height" constant="177" id="aJU-4C-8nt"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -83,10 +80,10 @@
                         <viewLayoutGuide key="safeArea" id="fdm-Zd-UAV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="k9T-0h-jTv" firstAttribute="top" secondItem="fdm-Zd-UAV" secondAttribute="top" constant="60" id="3c8-7w-yhz"/>
-                            <constraint firstItem="fdm-Zd-UAV" firstAttribute="bottom" secondItem="k9T-0h-jTv" secondAttribute="bottom" constant="143" id="9fG-q2-gbx"/>
-                            <constraint firstItem="k9T-0h-jTv" firstAttribute="leading" secondItem="fdm-Zd-UAV" secondAttribute="leading" constant="38" id="AYY-Ay-9S0"/>
-                            <constraint firstItem="k9T-0h-jTv" firstAttribute="centerX" secondItem="i8A-Mr-HV9" secondAttribute="centerX" id="ywK-V7-7F2"/>
+                            <constraint firstAttribute="bottom" secondItem="k9T-0h-jTv" secondAttribute="bottom" constant="177" id="4xV-n3-c6J"/>
+                            <constraint firstItem="k9T-0h-jTv" firstAttribute="centerX" secondItem="i8A-Mr-HV9" secondAttribute="centerX" id="Qf1-gg-DvF"/>
+                            <constraint firstItem="k9T-0h-jTv" firstAttribute="leading" secondItem="fdm-Zd-UAV" secondAttribute="leading" constant="38" id="oZa-Sf-7ho"/>
+                            <constraint firstItem="k9T-0h-jTv" firstAttribute="top" secondItem="fdm-Zd-UAV" secondAttribute="top" constant="60" id="xkY-oT-ejQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -107,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="tlg-3M-BGU">
-                                <rect key="frame" x="39" y="236.00000000000003" width="320" height="306.66666666666674"/>
+                                <rect key="frame" x="36.666666666666657" y="272.66666666666663" width="320" height="306.66666666666663"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-175010400">
                                     <!--1995-06-16 10:00:00 +0000-->
                                 </date>
@@ -119,9 +116,10 @@
                                     <segue destination="VQH-Fu-ZqZ" kind="show" identifier="ShowTabBarController" id="2FI-z0-g9W"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brq-M7-xE6">
-                                <rect key="frame" x="39" y="119" width="167" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select a date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brq-M7-xE6">
+                                <rect key="frame" x="39" y="119" width="140" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -129,10 +127,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="brq-M7-xE6" firstAttribute="leading" secondItem="tlg-3M-BGU" secondAttribute="leading" id="36n-An-W3I"/>
-                            <constraint firstItem="tlg-3M-BGU" firstAttribute="top" secondItem="brq-M7-xE6" secondAttribute="bottom" constant="81.000000000000028" id="IVG-sW-Jcc"/>
-                            <constraint firstItem="brq-M7-xE6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="TCk-y5-vtY"/>
-                            <constraint firstItem="brq-M7-xE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="v0L-8b-Ypz"/>
+                            <constraint firstItem="tlg-3M-BGU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Go-Js-LJY"/>
+                            <constraint firstItem="tlg-3M-BGU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fdk-ll-YM7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="APOD" image="calendar" catalog="system" id="0fL-CQ-niw"/>
