@@ -191,6 +191,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="imageView" destination="Ere-nm-Lbk" id="zUj-yg-Qys"/>
+                                    <segue destination="xH5-aa-o30" kind="show" identifier="EpicSegue" id="b0T-aS-jZm"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -205,6 +206,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GfG-4n-ixl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-428" y="2218"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="n2C-Lt-tuW">
+            <objects>
+                <viewController id="xH5-aa-o30" customClass="DetailViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mXZ-wz-hwz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sCn-82-qDg">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctm-Z8-amN">
+                                <rect key="frame" x="49" y="61" width="301" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rzI-Ng-E8k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ctm-Z8-amN" firstAttribute="top" secondItem="rzI-Ng-E8k" secondAttribute="top" constant="61" id="1AE-D1-eSe"/>
+                            <constraint firstItem="sCn-82-qDg" firstAttribute="leading" secondItem="rzI-Ng-E8k" secondAttribute="leading" id="3Gw-Mj-v1P"/>
+                            <constraint firstItem="sCn-82-qDg" firstAttribute="top" secondItem="rzI-Ng-E8k" secondAttribute="top" id="ExU-rE-YhM"/>
+                            <constraint firstItem="Ctm-Z8-amN" firstAttribute="leading" secondItem="rzI-Ng-E8k" secondAttribute="leading" constant="49" id="L6H-CV-1hq"/>
+                            <constraint firstItem="rzI-Ng-E8k" firstAttribute="trailing" secondItem="Ctm-Z8-amN" secondAttribute="trailing" constant="43" id="jOy-xx-TiJ"/>
+                            <constraint firstItem="sCn-82-qDg" firstAttribute="bottom" secondItem="rzI-Ng-E8k" secondAttribute="bottom" id="tke-bp-32j"/>
+                            <constraint firstItem="sCn-82-qDg" firstAttribute="trailing" secondItem="rzI-Ng-E8k" secondAttribute="trailing" id="wR3-1K-3LV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aCB-fZ-GJo"/>
+                    <connections>
+                        <outlet property="date" destination="Ctm-Z8-amN" id="fda-3v-kVE"/>
+                        <outlet property="imageView" destination="sCn-82-qDg" id="7WN-7G-15I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1V-gz-tcw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788.54961832061065" y="2217.605633802817"/>
         </scene>
         <!--EONET-->
         <scene sceneID="QyF-a1-nCJ">

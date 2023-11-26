@@ -10,6 +10,7 @@
 		EF0C8FC22B12289700E6FD92 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C8FC12B12289700E6FD92 /* Event.swift */; };
 		EF0C8FC42B1228B600E6FD92 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C8FC32B1228B600E6FD92 /* EventViewController.swift */; };
 		EF0C8FC62B12290300E6FD92 /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = EF0C8FC52B12290300E6FD92 /* events.json */; };
+		EF0C8FCA2B13A9AE00E6FD92 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C8FC92B13A9AE00E6FD92 /* DetailViewController.swift */; };
 		EFC6115F2B0C227F00A73E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC6115E2B0C227F00A73E7A /* AppDelegate.swift */; };
 		EFC611612B0C227F00A73E7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611602B0C227F00A73E7A /* SceneDelegate.swift */; };
 		EFC611632B0C227F00A73E7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611622B0C227F00A73E7A /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		EF0C8FC12B12289700E6FD92 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		EF0C8FC32B1228B600E6FD92 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		EF0C8FC52B12290300E6FD92 /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
+		EF0C8FC92B13A9AE00E6FD92 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EFC6115B2B0C227F00A73E7A /* MyNASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC6115E2B0C227F00A73E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC611602B0C227F00A73E7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				EF0C8FC12B12289700E6FD92 /* Event.swift */,
 				EF0C8FC32B1228B600E6FD92 /* EventViewController.swift */,
 				EF0C8FC52B12290300E6FD92 /* events.json */,
+				EF0C8FC92B13A9AE00E6FD92 /* DetailViewController.swift */,
 			);
 			path = MyNASA;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0C8FCA2B13A9AE00E6FD92 /* DetailViewController.swift in Sources */,
 				EFC611732B0C255000A73E7A /* CalendarViewController.swift in Sources */,
 				EF0C8FC22B12289700E6FD92 /* Event.swift in Sources */,
 				EFC6117B2B0CEA9100A73E7A /* PageContentViewController.swift in Sources */,

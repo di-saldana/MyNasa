@@ -26,7 +26,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         // Do any additional setup after loading the view.
         
         for i in 1..<25 {
-            let image = "epic-\(i).jpeg"
+            let image = "\(i).jpeg"
             self.epicImages.append(image)
         }
         
@@ -72,7 +72,20 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EpicSegue",
+           let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first,
+           let detailViewController = segue.destination as? DetailViewController {
+            
+            let selectedImage = epicImages[selectedIndexPath.row]
+            detailViewController.imageName = selectedImage
+        }
+    }
+        
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "EpicSegue", sender: self)
+    }
+
     // MARK: UICollectionViewDelegate
     
     /*
