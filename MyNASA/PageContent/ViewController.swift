@@ -11,11 +11,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     
     @IBOutlet weak var skipButton: UIButton!
     
+    // Descripciones de las páginas
     let pageDescriptions = ["Explore some of the most interesting capabilities NASA's API has to offer!", "Experience a captivating glimpse into the cosmos by viewing the Astronomy Picture of the Day!", "Discover EPIC Images of Earth!", "Learn more about the history around natural events all around the world!"]
+    
+    // Imágenes de las páginas
     let pageImages = ["Saly-1.png", "Rover.png", "Planet-1.png", "Star2.png"]
 
     var pageViewController : UIPageViewController?
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +41,11 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         self.view.addSubview((self.pageViewController?.view)!)
         self.pageViewController?.didMove(toParent: self)
         
-
         skipButton.layer.zPosition = 1
         view.bringSubviewToFront(skipButton)
         skipButton.translatesAutoresizingMaskIntoConstraints = false
 
-        // Add constraints to keep the button in the bottom right corner
+        // Agregamos restricciones para mantener el botón en la esquina inferior derecha
         NSLayoutConstraint.activate([
             skipButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
             skipButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
@@ -52,6 +53,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     }
 
     
+    // Función para obtener el controlador de contenido en un índice dado
     func viewControllerAtIndex(index : Int) -> PageContentViewController? {
           if self.pageDescriptions.count == 0 || index >= self.pageDescriptions.count {
                   return nil
@@ -67,7 +69,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
           return pageContentViewController
       }
 
-      func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    // Función para obtener el controlador de contenido anterior al controlador actual
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 
           let pvc = viewController as! PageContentViewController
           var index = pvc.pageIndex
@@ -80,7 +83,8 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
           return self.viewControllerAtIndex(index: index)
       }
 
-      func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    // Función para obtener el controlador de contenido siguiente al controlador actual
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
 
           let pvc = viewController as! PageContentViewController
           var index = pvc.pageIndex
@@ -96,15 +100,17 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
           return self.viewControllerAtIndex(index: index)
       }
     
+    // Función para obtener el número total de páginas
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return self.pageDescriptions.count
     }
 
+    // Función para obtener el índice de la página actual
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
     }
     
-    
+    // Acción del botón "Start"
     @IBAction func skip(_ sender: UIButton) {
         let mainTabBarViewController = storyboard?.instantiateViewController(withIdentifier: "mainTabBar") as! UITabBarController
         mainTabBarViewController.modalPresentationStyle = .fullScreen

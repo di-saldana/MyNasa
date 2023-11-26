@@ -19,14 +19,15 @@ class EventViewController: UITableViewController, UISearchResultsUpdating {
 
         self.title = "EONET"
 
+        // Cargar los datos del archivo JSON
         if let path = Bundle.main.path(forResource: "events", ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
             let eventsResponse = try? JSONDecoder().decode(EventsResponse.self, from: data) {
-            self.eventsResponse = eventsResponse // Assign the loaded eventsResponse to the property
+            self.eventsResponse = eventsResponse
             searchResults = eventsResponse.events
         }
 
-        // Set up search controller...
+        // Configurar el controlador de búsqueda
         let searchResultsController = UITableViewController(style: .plain)
         searchResultsController.tableView.dataSource = self
         searchResultsController.tableView.delegate = self
@@ -47,7 +48,7 @@ class EventViewController: UITableViewController, UISearchResultsUpdating {
         self.definesPresentationContext = true
     }
 
-    // Other table view methods...
+    // Otros métodos de la tabla
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let src = self.searchController?.searchResultsController as! UITableViewController
 
@@ -84,17 +85,16 @@ class EventViewController: UITableViewController, UISearchResultsUpdating {
             object = self.searchResults[(sc.tableView.indexPathForSelectedRow?.row)!]
         }
 
-        // Open the source URL in the default web browser
+        // Abrir la URL fuente en el navegador web
         if let url = URL(string: object.sources.first?.url ?? "") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
 
-    // Search update method...
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchString = searchController.searchBar.text, !searchString.isEmpty else {
-            searchResults = eventsResponse?.events ?? [] // Use the eventsResponse property
-            // Reload data for the search results table view
+            searchResults = eventsResponse?.events ?? [] 
+            // Recargar los datos en la vista de tabla de resultados de búsqueda
             if let searchResultsController = searchController.searchResultsController as? UITableViewController {
                 searchResultsController.tableView.reloadData()
             }
@@ -102,7 +102,6 @@ class EventViewController: UITableViewController, UISearchResultsUpdating {
         }
 
         searchResults = eventsResponse?.events.filter { $0.title.lowercased().contains(searchString.lowercased()) } ?? []
-        // Reload data for the search results table view
         if let searchResultsController = searchController.searchResultsController as? UITableViewController {
             searchResultsController.tableView.reloadData()
         }

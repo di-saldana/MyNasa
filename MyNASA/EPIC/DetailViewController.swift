@@ -18,10 +18,12 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Comprueba si se ha proporcionado un nombre de imagen y si se puede crear una instancia de UIImage con ese nombre
         if let imageName = imageName, let image = UIImage(named: imageName) {
             imageView.image = image
         }
         
+        // Elimina la extensión ".jpeg" del nombre
         if let imageNameWithoutExtension = imageName?.replacingOccurrences(of: ".jpeg", with: "") {
             date.text = "November \(imageNameWithoutExtension), 2023"
         }

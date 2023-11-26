@@ -17,11 +17,11 @@ class AstronomyPictureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchAstronomyPicture()
+        fetchAstronomyPicture() // Llama a la función para obtener la imagen APOD
     }
 
     func fetchAstronomyPicture() {
-        loadingIndicator.startAnimating()
+        loadingIndicator.startAnimating() // Inicia la animación del indicador de carga
 
         let apiKey = "JCcUwEhU7IpzmZ1kIN3rHHtO9rNLZQ0maCPIgvhV"
         let formatter = DateFormatter()
@@ -34,8 +34,8 @@ class AstronomyPictureViewController: UIViewController {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 defer {
                     DispatchQueue.main.async {
-                        self.loadingIndicator.stopAnimating()
-                        self.loadingIndicator.isHidden = true
+                        self.loadingIndicator.stopAnimating() // Detiene la animación del indicador de carga
+                        self.loadingIndicator.isHidden = true // Oculta el indicador de carga
                     }
                 }
                 
@@ -45,7 +45,7 @@ class AstronomyPictureViewController: UIViewController {
                         let astronomyPicture = try decoder.decode(AstronomyPicture.self, from: data)
 
                         if let imageUrl = URL(string: astronomyPicture.url) {
-                            self.loadImageAsync(from: imageUrl)
+                            self.loadImageAsync(from: imageUrl) // Carga la imagen de forma asíncrona desde la URL proporcionada
                         }
                     } catch {
                         print("Error decoding JSON: \(error)")
@@ -59,7 +59,7 @@ class AstronomyPictureViewController: UIViewController {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
                 DispatchQueue.main.async {
-                    self.astronomyImageView.image = UIImage(data: data)
+                    self.astronomyImageView.image = UIImage(data: data) // Establece la imagen descargada en la vista de imagen
                 }
             }
         }.resume()

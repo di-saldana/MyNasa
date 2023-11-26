@@ -23,8 +23,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         // Register cell classes
         self.collectionView!.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        // Do any additional setup after loading the view.
-        
         for i in 1..<25 {
             let image = "\(i).jpeg"
             self.epicImages.append(image)

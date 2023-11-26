@@ -20,7 +20,11 @@ class PageContentViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Se establece la imagen del imageView con el nombre de archivo proporcionado
         self.imageView.image = UIImage(named: self.imageFilename)
+        
+        // Se establece el texto de la descripción en el textView con el texto proporcionado
         self.descriptionTextView.text = self.descrText
 
     }

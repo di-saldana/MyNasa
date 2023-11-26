@@ -8,17 +8,12 @@
 import Foundation
 
 struct AstronomyPicture: Codable {
-    let date: String?
-    let explanation: String
-    let hdurl: String
-    let mediaType: String?
-    let serviceVersion: String?
-    let title: String
-    let url: String
+    let date: String? // Fecha de la imagen APOD
+    let explanation: String // Explicación de la imagen APOD
+    let title: String // Título de la imagen APOD
+    let url: String // URL de la imagen APOD
 
     enum CodingKeys: String, CodingKey {
-        case date, explanation, title, url, hdurl, mediaType, serviceVersion
+        case date, explanation, title, url
     }
 }
-
-
