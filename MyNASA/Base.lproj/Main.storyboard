@@ -54,20 +54,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k9T-0h-jTv">
-                                <rect key="frame" x="38" y="119" width="317" height="556"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k9T-0h-jTv">
+                                <rect key="frame" x="38" y="119" width="317" height="614"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Odo-9H-ChQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="317" height="369"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="317" height="427"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krN-kn-8aS">
-                                        <rect key="frame" x="0.0" y="379" width="317" height="177"/>
+                                        <rect key="frame" x="0.0" y="437" width="317" height="177"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <bool key="isElement" value="NO"/>
                                         </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="177" id="aJU-4C-8nt"/>
+                                            <constraint firstAttribute="height" constant="177" id="2UA-1R-QmN"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -80,10 +80,10 @@
                         <viewLayoutGuide key="safeArea" id="fdm-Zd-UAV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="k9T-0h-jTv" secondAttribute="bottom" constant="177" id="4xV-n3-c6J"/>
-                            <constraint firstItem="k9T-0h-jTv" firstAttribute="centerX" secondItem="i8A-Mr-HV9" secondAttribute="centerX" id="Qf1-gg-DvF"/>
-                            <constraint firstItem="k9T-0h-jTv" firstAttribute="leading" secondItem="fdm-Zd-UAV" secondAttribute="leading" constant="38" id="oZa-Sf-7ho"/>
-                            <constraint firstItem="k9T-0h-jTv" firstAttribute="top" secondItem="fdm-Zd-UAV" secondAttribute="top" constant="60" id="xkY-oT-ejQ"/>
+                            <constraint firstItem="k9T-0h-jTv" firstAttribute="top" secondItem="fdm-Zd-UAV" secondAttribute="top" constant="60" id="5QM-0n-hV6"/>
+                            <constraint firstItem="k9T-0h-jTv" firstAttribute="centerX" secondItem="i8A-Mr-HV9" secondAttribute="centerX" id="P4V-sa-fI2"/>
+                            <constraint firstItem="k9T-0h-jTv" firstAttribute="centerY" secondItem="i8A-Mr-HV9" secondAttribute="centerY" id="Yd2-Sj-piM"/>
+                            <constraint firstItem="k9T-0h-jTv" firstAttribute="leading" secondItem="fdm-Zd-UAV" secondAttribute="leading" constant="38" id="fzC-y9-MXe"/>
                         </constraints>
                     </view>
                     <connections>
