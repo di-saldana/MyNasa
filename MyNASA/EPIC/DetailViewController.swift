@@ -20,7 +20,6 @@ class DetailViewController: UIViewController {
         
         // Comprueba si se ha proporcionado un nombre de imagen y si se puede crear una instancia de UIImage con ese nombre
         if let imageName = imageName, let image = UIImage(named: "high-\(imageName)") {
-            print("high-\(imageName)")
             imageView.image = image
         }
         
