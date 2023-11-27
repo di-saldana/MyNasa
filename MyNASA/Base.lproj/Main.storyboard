@@ -154,78 +154,27 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="96n-q6-Wpo"/>
-                        <segue destination="hQs-Fh-Dae" kind="relationship" relationship="viewControllers" id="0SN-aq-BoJ"/>
                         <segue destination="hu6-87-Ng9" kind="relationship" relationship="viewControllers" id="2VL-a4-aN4"/>
+                        <segue destination="QDI-S7-1S2" kind="relationship" relationship="viewControllers" id="rcm-ZI-dqS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuH-A2-cfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2492" y="1473"/>
         </scene>
-        <!--EPIC-->
-        <scene sceneID="Ptj-CG-9aR">
-            <objects>
-                <collectionViewController title="EPIC November 2023 Images" interactionActivityTrackingBaseName="EPIC November 2023 Images" id="hQs-Fh-Dae" userLabel="EPIC" customClass="CollectionViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" id="LZG-wx-jZo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="s1h-Vv-mkj">
-                            <size key="itemSize" width="150" height="150"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="idCelda" translatesAutoresizingMaskIntoConstraints="NO" id="Jpy-Vq-Au1" customClass="CollectionViewCell" customModule="MyNASA" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="vDK-2L-4Tm">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Ere-nm-Lbk">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                    <variation key="heightClass=regular-widthClass=compact">
-                                        <mask key="subviews">
-                                            <include reference="Ere-nm-Lbk"/>
-                                        </mask>
-                                    </variation>
-                                </collectionViewCellContentView>
-                                <connections>
-                                    <outlet property="imageView" destination="Ere-nm-Lbk" id="zUj-yg-Qys"/>
-                                    <segue destination="xH5-aa-o30" kind="show" identifier="EpicSegue" id="b0T-aS-jZm"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="hQs-Fh-Dae" id="0au-6f-iIA"/>
-                            <outlet property="delegate" destination="hQs-Fh-Dae" id="Z7p-Oy-Ldc"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="EPIC" image="globe.europe.africa.fill" catalog="system" id="GbY-Ut-CS2"/>
-                    <navigationItem key="navigationItem" id="OxX-OM-Ez3"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GfG-4n-ixl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-428" y="2218"/>
-        </scene>
         <!--Detail View Controller-->
         <scene sceneID="n2C-Lt-tuW">
             <objects>
                 <viewController id="xH5-aa-o30" customClass="DetailViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mXZ-wz-hwz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sCn-82-qDg">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctm-Z8-amN">
-                                <rect key="frame" x="49" y="61" width="301" height="30"/>
+                                <rect key="frame" x="49" y="164" width="301" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -251,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1V-gz-tcw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788.54961832061065" y="2217.605633802817"/>
+            <point key="canvasLocation" x="2018" y="2218"/>
         </scene>
         <!--EONET-->
         <scene sceneID="QyF-a1-nCJ">
@@ -379,6 +328,56 @@
             </objects>
             <point key="canvasLocation" x="2017.5572519083969" y="713.38028169014092"/>
         </scene>
+        <!--EPIC November 2023-->
+        <scene sceneID="Hy2-Zg-orH">
+            <objects>
+                <viewController id="LdY-nD-MEx" customClass="CollectionViewController" customModule="MyNASA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N26-Vd-Lfs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6uQ-Nt-Uwa">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mBW-Km-RvN">
+                                    <size key="itemSize" width="135" height="135"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="beN-vv-dmw">
+                                        <rect key="frame" x="16" y="16" width="135" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="L9E-pw-LWQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <segue destination="xH5-aa-o30" kind="show" identifier="EpicSegue" id="lds-kC-byJ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v6B-2q-iAj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v6B-2q-iAj" firstAttribute="trailing" secondItem="6uQ-Nt-Uwa" secondAttribute="trailing" id="A4o-Zb-EFx"/>
+                            <constraint firstItem="6uQ-Nt-Uwa" firstAttribute="top" secondItem="v6B-2q-iAj" secondAttribute="top" id="LHW-0T-mvA"/>
+                            <constraint firstItem="v6B-2q-iAj" firstAttribute="bottom" secondItem="6uQ-Nt-Uwa" secondAttribute="bottom" id="nh5-a0-Cob"/>
+                            <constraint firstItem="6uQ-Nt-Uwa" firstAttribute="leading" secondItem="v6B-2q-iAj" secondAttribute="leading" id="tOh-BT-dZp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="EPIC November 2023" id="8Co-TF-gYY"/>
+                    <connections>
+                        <outlet property="collectionView" destination="6uQ-Nt-Uwa" id="5mH-Bq-sN2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbs-hZ-wfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="2218"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="c6K-4i-PP1">
             <objects>
@@ -417,6 +416,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wod-3A-qjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-428" y="3294"/>
+        </scene>
+        <!--EPIC-->
+        <scene sceneID="iHo-dy-ohR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QDI-S7-1S2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="EPIC" image="globe.europe.africa.fill" catalog="system" id="WCR-at-YT3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qa1-DV-kHI">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LdY-nD-MEx" kind="relationship" relationship="rootViewController" id="A6F-gS-7Xk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRA-jS-H3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-428" y="2218"/>
         </scene>
     </scenes>
     <resources>

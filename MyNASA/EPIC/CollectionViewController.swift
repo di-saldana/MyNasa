@@ -2,86 +2,57 @@
 //  CollectionViewController.swift
 //  MyNASA
 //
-//  Created by Dianelys Saldaña on 11/23/23.
+//  Created by Dianelys Saldaña on 11/26/23.
 //
-
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+class CollectionViewController: UIViewController, UICollectionViewDelegate {
 
-class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var epicImages = [String]()
+    var estimatedWidth = 160.0
+    var cellMarginSize = 16.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Register cell classes
-        self.collectionView!.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
+        // Inicialización de epicImages
         for i in 1..<25 {
             let image = "\(i).jpeg"
             self.epicImages.append(image)
         }
         
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            let layout = UICollectionViewFlowLayout()
-            layout.minimumInteritemSpacing = 4
-            layout.minimumLineSpacing = 2
-            layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-            
-            let itemWidth = (UIScreen.main.bounds.width - layout.sectionInset.left - layout.sectionInset.right - layout.minimumInteritemSpacing * 2) / 3 // Adjust the division based on the number of items per row
-            let itemHeight = itemWidth
-            
-            let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        }
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
         
-    }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    // MARK: UICollectionViewDataSource
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.epicImages.count
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "idCelda", for: indexPath) as! CollectionViewCell
+        // Registramos la celda personalizada "ItemCell" en la colección
+        self.collectionView.register(UINib(nibName: "ItemCell", bundle: nil), forCellWithReuseIdentifier: "ItemCell")
         
-        if let image = UIImage(named:self.epicImages[indexPath.row]) {
-            cell.imageView.image = image
-        }
-        return cell
+        self.setupGridView()
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let spacing: CGFloat = 5
-        let numberOfColumns: CGFloat = 3
-        let screenWidth = UIScreen.main.bounds.width
-        let cellWidth = (screenWidth - (spacing * (numberOfColumns - 1))) / numberOfColumns
-        let cellHeight = cellWidth
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        return CGSize(width: cellWidth, height: cellHeight)
+        self.setupGridView()
     }
     
+    // Configuramos la cuadrícula de la vista de colección
+    func setupGridView() {
+        let flow = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+        flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
+        flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
+    }
+    
+    // Manejamos el evento de selección de una celda de la vista de colección
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedImage = epicImages[indexPath.row]
+        performSegue(withIdentifier: "EpicSegue", sender: selectedImage)
+    }
+    
+    // Preparamos los datos para la transición a la vista de detalle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EpicSegue",
            let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first,
@@ -91,40 +62,40 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             detailViewController.imageName = selectedImage
         }
     }
-        
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "EpicSegue", sender: self)
-    }
+    
+}
 
-    // MARK: UICollectionViewDelegate
+extension CollectionViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.epicImages.count
+    }
     
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! ItemCell
+        
+        // Asignamos la imagen correspondiente a la celda
+        if let image = UIImage(named:self.epicImages[indexPath.row]) {
+            cell.imageView.image = image
+        }
+        return cell
+    }
+}
+
+extension CollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = self.calculateWidth()
+        return CGSize(width: width, height: width)
+    }
     
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-     
-     }
-     */
+    // Calculamos el ancho de las celdas en función del tamaño de la vista y el margen
+    func calculateWidth() -> CGFloat {
+        let estimatedWidth = CGFloat(estimatedWidth)
+        let cellCount = floor(CGFloat(self.view.frame.size.width / estimatedWidth))
+        
+        let margin = CGFloat(cellMarginSize * 2)
+        let width = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount
+        
+        return width
+    }
     
 }

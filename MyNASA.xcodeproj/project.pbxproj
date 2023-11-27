@@ -11,6 +11,9 @@
 		EF0C8FC42B1228B600E6FD92 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C8FC32B1228B600E6FD92 /* EventViewController.swift */; };
 		EF0C8FC62B12290300E6FD92 /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = EF0C8FC52B12290300E6FD92 /* events.json */; };
 		EF0C8FCA2B13A9AE00E6FD92 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C8FC92B13A9AE00E6FD92 /* DetailViewController.swift */; };
+		EF0C8FD62B14007000E6FD92 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C8FD42B14007000E6FD92 /* ItemCell.swift */; };
+		EF0C8FD72B14007000E6FD92 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0C8FD52B14007000E6FD92 /* ItemCell.xib */; };
+		EF0C8FD92B1402C200E6FD92 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C8FD82B1402C200E6FD92 /* CollectionViewController.swift */; };
 		EFC6115F2B0C227F00A73E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC6115E2B0C227F00A73E7A /* AppDelegate.swift */; };
 		EFC611612B0C227F00A73E7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611602B0C227F00A73E7A /* SceneDelegate.swift */; };
 		EFC611632B0C227F00A73E7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611622B0C227F00A73E7A /* ViewController.swift */; };
@@ -22,8 +25,6 @@
 		EFC611772B0C259500A73E7A /* AstronomyPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611762B0C259500A73E7A /* AstronomyPicture.swift */; };
 		EFC611792B0CD88400A73E7A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC611782B0CD88400A73E7A /* InfoViewController.swift */; };
 		EFC6117B2B0CEA9100A73E7A /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC6117A2B0CEA9100A73E7A /* PageContentViewController.swift */; };
-		EFE29D002B0F7ACD004821A8 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE29CFF2B0F7ACD004821A8 /* CollectionViewController.swift */; };
-		EFE29D022B0F7AF4004821A8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE29D012B0F7AF3004821A8 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,9 @@
 		EF0C8FC32B1228B600E6FD92 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		EF0C8FC52B12290300E6FD92 /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
 		EF0C8FC92B13A9AE00E6FD92 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EF0C8FD42B14007000E6FD92 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		EF0C8FD52B14007000E6FD92 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		EF0C8FD82B1402C200E6FD92 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		EFC6115B2B0C227F00A73E7A /* MyNASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC6115E2B0C227F00A73E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC611602B0C227F00A73E7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +48,6 @@
 		EFC611762B0C259500A73E7A /* AstronomyPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicture.swift; sourceTree = "<group>"; };
 		EFC611782B0CD88400A73E7A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		EFC6117A2B0CEA9100A73E7A /* PageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
-		EFE29CFF2B0F7ACD004821A8 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		EFE29D012B0F7AF3004821A8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +75,9 @@
 		EF0C8FCD2B13C20300E6FD92 /* EPIC */ = {
 			isa = PBXGroup;
 			children = (
-				EFE29CFF2B0F7ACD004821A8 /* CollectionViewController.swift */,
-				EFE29D012B0F7AF3004821A8 /* CollectionViewCell.swift */,
+				EF0C8FD52B14007000E6FD92 /* ItemCell.xib */,
+				EF0C8FD42B14007000E6FD92 /* ItemCell.swift */,
+				EF0C8FD82B1402C200E6FD92 /* CollectionViewController.swift */,
 				EF0C8FC92B13A9AE00E6FD92 /* DetailViewController.swift */,
 			);
 			path = EPIC;
@@ -119,9 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				EF0C8FCF2B13C25F00E6FD92 /* PageContent */,
-				EF0C8FCE2B13C22A00E6FD92 /* EONET */,
-				EF0C8FCD2B13C20300E6FD92 /* EPIC */,
 				EF0C8FCC2B13C1C300E6FD92 /* APOD */,
+				EF0C8FCD2B13C20300E6FD92 /* EPIC */,
+				EF0C8FCE2B13C22A00E6FD92 /* EONET */,
 				EFC6115E2B0C227F00A73E7A /* AppDelegate.swift */,
 				EFC611602B0C227F00A73E7A /* SceneDelegate.swift */,
 				EFC611642B0C227F00A73E7A /* Main.storyboard */,
@@ -192,6 +195,7 @@
 			files = (
 				EF0C8FC62B12290300E6FD92 /* events.json in Resources */,
 				EFC6116B2B0C228200A73E7A /* LaunchScreen.storyboard in Resources */,
+				EF0C8FD72B14007000E6FD92 /* ItemCell.xib in Resources */,
 				EFC611682B0C228200A73E7A /* Assets.xcassets in Resources */,
 				EFC611662B0C227F00A73E7A /* Main.storyboard in Resources */,
 			);
@@ -208,15 +212,15 @@
 				EFC611732B0C255000A73E7A /* CalendarViewController.swift in Sources */,
 				EF0C8FC22B12289700E6FD92 /* Event.swift in Sources */,
 				EFC6117B2B0CEA9100A73E7A /* PageContentViewController.swift in Sources */,
+				EF0C8FD62B14007000E6FD92 /* ItemCell.swift in Sources */,
 				EFC611772B0C259500A73E7A /* AstronomyPicture.swift in Sources */,
-				EFE29D002B0F7ACD004821A8 /* CollectionViewController.swift in Sources */,
 				EF0C8FC42B1228B600E6FD92 /* EventViewController.swift in Sources */,
 				EFC611752B0C257900A73E7A /* AstronomyPictureViewController.swift in Sources */,
 				EFC611792B0CD88400A73E7A /* InfoViewController.swift in Sources */,
 				EFC611632B0C227F00A73E7A /* ViewController.swift in Sources */,
 				EFC6115F2B0C227F00A73E7A /* AppDelegate.swift in Sources */,
 				EFC611612B0C227F00A73E7A /* SceneDelegate.swift in Sources */,
-				EFE29D022B0F7AF4004821A8 /* CollectionViewCell.swift in Sources */,
+				EF0C8FD92B1402C200E6FD92 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
