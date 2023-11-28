@@ -28,6 +28,13 @@ class CalendarViewController: UIViewController {
                 datePicker.bottomAnchor.constraint(equalTo: view.bottomAnchor),
                 datePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             ])
+        } else {
+            // Constraints para iPhone
+            datePicker.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                datePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                datePicker.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
         }
     }
     
