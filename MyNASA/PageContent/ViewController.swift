@@ -12,10 +12,10 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     @IBOutlet weak var skipButton: UIButton!
     
     // Descripciones de las páginas
-    let pageDescriptions = ["Explore some of the most interesting capabilities NASA's API has to offer!", "Experience a captivating glimpse into the cosmos by viewing the Astronomy Picture of the Day!", "Discover EPIC Images of Earth!", "Learn more about the history around natural events all around the world!"]
+    let pageDescriptions = ["Explore some of the most interesting capabilities NASA's API has to offer!", "Experience a captivating glimpse into the cosmos by viewing the Astronomy Picture of the Day!", "Learn more about each of these Astronomy Images!"]
     
     // Imágenes de las páginas
-    let pageImages = ["Saly-1.png", "Rover.png", "Planet-1.png", "Star2.png"]
+    let pageImages = ["Saly-1.png", "Rover.png", "Star2.png"]
 
     var pageViewController : UIPageViewController?
 
@@ -112,7 +112,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     
     // Acción del botón "Start"
     @IBAction func skip(_ sender: UIButton) {
-        let mainTabBarViewController = storyboard?.instantiateViewController(withIdentifier: "mainTabBar") as! UITabBarController
+        let mainTabBarViewController = storyboard?.instantiateViewController(withIdentifier: "CalendarViewController") as! UIViewController
         mainTabBarViewController.modalPresentationStyle = .fullScreen
         self.present(mainTabBarViewController, animated: true, completion: nil)
     }

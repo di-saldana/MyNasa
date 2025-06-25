@@ -21,6 +21,12 @@ class PageContentViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        // Set the text color to black
+        descriptionTextView.textColor = .black
+        
+        // Set the background color to white
+        descriptionTextView.backgroundColor = .white
+        
         // Se establece la imagen del imageView con el nombre de archivo proporcionado
         self.imageView.image = UIImage(named: self.imageFilename)
         
